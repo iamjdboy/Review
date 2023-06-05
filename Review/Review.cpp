@@ -85,9 +85,15 @@ int main()
             cout << tries - i << " more reserved tries before closing app." << endl << endl;
             cout << "Enter your PIN number: ";
             cin >> pin;
+            system("cls");
             if (pin != pinpw) {
                 cout << "You've entered incorrect PIN number!" << endl <<
-                        "You have " << tries - i << " choices left to make!" << endl << endl;
+                        "Press enter to continue.";
+                        cin.get();
+                        if (cin.get() == '\n') {
+                            system("cls");
+                        }
+                        //"You have " << tries - i << " choices left to make!" << endl << endl;
             }
             else if (pin == pinpw) {
                 cout << "Congrats!";
@@ -101,9 +107,15 @@ int main()
             cout << tries - i << " more reserved tries before closing app." << endl << endl;
             cout << "Enter your PIN number: " << endl << endl;
             cin >> pin;
+            system("cls");
             if (pin != pinpw) {
                 cout << "You've entered incorrect PIN number!" << endl <<
-                        "You have " << tries - i << " choices left to make!" << endl << endl;
+                    "Press enter to continue.";
+                cin.get();
+                if (cin.get() == '\n') {
+                    system("cls");
+                }
+                //"You have " << tries - i << " choices left to make!" << endl << endl;
             }
             else if (pin == pinpw) {
                 cout << "Congrats!";
